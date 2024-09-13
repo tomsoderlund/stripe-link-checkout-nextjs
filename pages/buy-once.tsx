@@ -23,11 +23,11 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <main>
       <h1>Buy Our Product</h1>
       <button onClick={handleCheckout} disabled={loading}>
         {loading ? 'Redirecting...' : 'Checkout'}
       </button>
-    </div>
+    </main>
   );
 }

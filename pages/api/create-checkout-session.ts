@@ -24,7 +24,7 @@ export default async function handler(
               product_data: {
                 name: 'Sample Product',
               },
-              unit_amount: 5000, // Amount in cents ($50.00)
+              unit_amount: 500, // Amount in cents ($5.00)
             },
             quantity: 1,
           },
