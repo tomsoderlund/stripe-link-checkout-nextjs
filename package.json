@@ -1,7 +1,7 @@
 {
   "name": "stripe-nextjs",
+  "description": "Stripe Link Checkout for Next.js",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev --port 3802",
     "build": "next build",

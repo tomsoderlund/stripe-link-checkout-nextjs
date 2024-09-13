@@ -89,3 +89,12 @@ button:disabled,
   opacity: 0.3;
 }
 
+a.button {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
