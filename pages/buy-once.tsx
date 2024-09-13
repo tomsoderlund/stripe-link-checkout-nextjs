@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const BuyOnce: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false)
+  const router = useRouter()
 
   const handleCheckout = async (): Promise<void> => {
     setLoading(true)
@@ -10,8 +12,8 @@ const BuyOnce: React.FC = () => {
         method: 'POST'
       })
       const data = await response.json()
-      if (data.url === undefined) {
-        window.location.href = data.url
+      if (data.url !== undefined) {
+        void router.push(data.url)
       } else {
         console.error('An error occurred:', data)
       }
@@ -25,8 +27,8 @@ const BuyOnce: React.FC = () => {
   return (
     <main>
       <h1>Buy Our Product</h1>
-      <button onClick={(e) => { void handleCheckout() }} disabled={loading}>
-        {loading ? 'Redirecting...' : 'Checkout'}
+      <button onClick={() => { void handleCheckout() }} disabled={loading}>
+        {loading ? 'Redirecting...' : 'Buy it now'}
       </button>
     </main>
   )

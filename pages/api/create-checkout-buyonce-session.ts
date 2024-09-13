@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import Stripe from 'stripe'
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY as string
-
-const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: '2024-06-20'
-})
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, { apiVersion: '2024-06-20' })
 
 export default async function handler (
   req: NextApiRequest,
@@ -13,6 +9,8 @@ export default async function handler (
 ): Promise<void> {
   if (req.method === 'POST') {
     try {
+      const origin = req.headers.origin ?? 'http://localhost:3110'
+
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card', 'link'],
         line_items: [
@@ -28,8 +26,8 @@ export default async function handler (
           }
         ],
         mode: 'payment',
-        success_url: `${req.headers.origin as string}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${req.headers.origin as string}/cancel`
+        success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${origin}/cancel`
       })
 
       res.status(200).json({ url: session.url })

@@ -6,11 +6,11 @@ const Home: React.FC = () => (
   <main>
     <h1>{packageJson.description}</h1>
     <div className='flex'>
-      <Link className='button' href='/buy-once'>
-        Buy Once
+      <Link href='/buy-once'>
+        Buying Once
       </Link>
-      <Link className='button' href='/buy-subscription'>
-        Buy Subscription
+      <Link href='/buy-subscription'>
+        Buying Subscription
       </Link>
     </div>
   </main>
