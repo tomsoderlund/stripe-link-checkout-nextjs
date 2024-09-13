@@ -6,6 +6,8 @@
 
 This is a reference implementation of **Stripe Link Checkout** integrated with a **Next.js**/**React** application using **TypeScript**. The project demonstrates how to set up a simple e-commerce flow where users can purchase a **product or subscription** using Stripe's **Link** payment method with minimal coding effort.
 
+Blog post: https://www.tomsoderlund.com/programming/stripe-link-checkout-nextjs-react
+
 ## Features
 
 - **Stripe Link Integration**: Supports the Link payment method for a faster checkout experience.
