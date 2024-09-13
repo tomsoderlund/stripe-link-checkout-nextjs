@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is a reference implementation of **Stripe Link Checkout** integrated with a **Next.js**/**React** application using **TypeScript**. The project demonstrates how to set up a simple e-commerce flow where users can purchase a product using Stripe's **Link** payment method with minimal coding effort.
+This is a reference implementation of **Stripe Link Checkout** integrated with a **Next.js**/**React** application using **TypeScript**. The project demonstrates how to set up a simple e-commerce flow where users can purchase a **product or subscription** using Stripe's **Link** payment method with minimal coding effort.
 
 ## Table of Contents
 
@@ -17,6 +17,7 @@ This is a reference implementation of **Stripe Link Checkout** integrated with a
 - [Running the Development Server](#running-the-development-server)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
+- [Subscriptions](#subscriptions)
 - [Customization](#customization)
 - [Additional Resources](#additional-resources)
 
@@ -112,6 +113,13 @@ stripe-link-checkout-nextjs/
 
 - **Complete Payment**: Enter payment details and complete the purchase. You will be redirected to the **Success** page.
 - **Cancel Payment**: Click the **Cancel** button during checkout. You will be redirected to the **Cancel** page.
+
+## Subscriptions
+
+- Product catalog: https://dashboard.stripe.com/test/products (testing) or https://dashboard.stripe.com/products (live)
+- Create new product
+- In the Pricing list, click the “…” button and then “Copy price ID”
+- Add `STRIPE_PRICE_ID` to `.env.local`
 
 ## Customization
 
