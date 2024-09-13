@@ -42,8 +42,8 @@ Before you begin, ensure you have met the following requirements:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/stripe-nextjs.git
-cd stripe-nextjs
+git clone https://github.com/yourusername/stripe-link-checkout-nextjs.git
+cd stripe-link-checkout-nextjs
 ```
 
 ### Install Dependencies
@@ -78,7 +78,7 @@ Open your browser and navigate to `http://localhost:3011` to view the applicatio
 ## Project Structure
 
 ```
-stripe-nextjs/
+stripe-link-checkout-nextjs/
 ├── pages/
 │   ├── api/
 │   │   └── create-checkout-session.ts

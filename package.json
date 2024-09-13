@@ -1,5 +1,5 @@
 {
-  "name": "stripe-nextjs",
+  "name": "stripe-link-checkout-nextjs",
   "description": "Stripe Link Checkout for Next.js and React: a reference implementation",
   "version": "0.1.0",
   "scripts": {
