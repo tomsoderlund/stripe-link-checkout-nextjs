@@ -81,14 +81,14 @@ Open your browser and navigate to `http://localhost:3011` to view the applicatio
 stripe-link-checkout-nextjs/
 ├── pages/
 │   ├── api/
-│   │   └── create-checkout-session.ts
+│   │   └── create-checkout-buyonce-session.ts
 │   ├── cancel.tsx
 │   ├── index.tsx
 │   └── success.tsx
 └── .env.local
 ```
 
-- **pages/api/create-checkout-session.ts**: API route that creates a Stripe Checkout Session.
+- **pages/api/create-checkout-buyonce-session.ts**: API route that creates a Stripe Checkout Session.
 - **pages/index.tsx**: Main page with a button to initiate the checkout process.
 - **pages/success.tsx**: Success page displayed after a successful payment.
 - **pages/cancel.tsx**: Cancel page displayed if the payment is canceled.
@@ -117,10 +117,10 @@ stripe-link-checkout-nextjs/
 
 ### Modify Product Details
 
-To change the product name or price, edit the `line_items` in `create-checkout-session.ts`:
+To change the product name or price, edit the `line_items` in `create-checkout-buyonce-session.ts`:
 
 ```typescript
-// pages/api/create-checkout-session.ts
+// pages/api/create-checkout-buyonce-session.ts
 
 const session = await stripe.checkout.sessions.create({
   // ...
@@ -142,7 +142,7 @@ const session = await stripe.checkout.sessions.create({
 
 ### Update Success and Cancel URLs
 
-If you're deploying to production, update the `success_url` and `cancel_url` in `create-checkout-session.ts`:
+If you're deploying to production, update the `success_url` and `cancel_url` in `create-checkout-buyonce-session.ts`:
 
 ```typescript
 const YOUR_DOMAIN = 'https://yourdomain.com';
