@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import 'aether-css-framework/dist/aether.min.css'
 import '@/styles/globals.css'
 import packageJson from '../package.json'
 
