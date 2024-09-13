@@ -3,10 +3,7 @@ import Stripe from 'stripe'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, { apiVersion: '2024-06-20' })
 
-export default async function handler (
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> {
+export default async function handler (req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'POST') {
     try {
       const origin = req.headers.origin ?? 'http://localhost:3110'
