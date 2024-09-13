@@ -1,9 +1,9 @@
 {
   "name": "stripe-nextjs",
-  "description": "Stripe Link Checkout for Next.js",
+  "description": "Stripe Link Checkout for Next.js and React: a reference implementation",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev --port 3802",
+    "dev": "next dev --port 3011",
     "build": "next build",
     "start": "next start",
     "lint:nextjs": "next lint",
