@@ -6,7 +6,17 @@
     "dev": "next dev --port 3802",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint:nextjs": "next lint",
+    "lint": "ts-standard",
+    "fix": "ts-standard --fix"
+  },
+  "ts-standard": {
+    "ignore": [
+      ".next"
+    ],
+    "globals": [
+      "fetch"
+    ]
   },
   "dependencies": {
     "next": "14.2.11",
@@ -21,6 +31,7 @@
     "@types/stripe": "^8.0.417",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
+    "ts-standard": "^12.0.2",
     "typescript": "^5"
   }
 }
