@@ -1,25 +1,10 @@
 # Stripe Link Checkout for Next.js and React: A Reference Implementation
 
-![Stripe Next.js](https://stripe.com/img/v3/newsroom/social.png)
+![Stripe Next.js](https://dtf.digital/wp-content/uploads/2022/11/link-by-stripe.jpg)
 
 ## Introduction
 
 This is a reference implementation of **Stripe Link Checkout** integrated with a **Next.js**/**React** application using **TypeScript**. The project demonstrates how to set up a simple e-commerce flow where users can purchase a **product or subscription** using Stripe's **Link** payment method with minimal coding effort.
-
-## Table of Contents
-
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-  - [Clone the Repository](#clone-the-repository)
-  - [Install Dependencies](#install-dependencies)
-  - [Configure Environment Variables](#configure-environment-variables)
-- [Running the Development Server](#running-the-development-server)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Subscriptions](#subscriptions)
-- [Customization](#customization)
-- [Additional Resources](#additional-resources)
 
 ## Features
 
@@ -27,16 +12,6 @@ This is a reference implementation of **Stripe Link Checkout** integrated with a
 - **Next.js with TypeScript**: Utilizes Next.js API routes and pages written in TypeScript.
 - **Minimal Setup**: Designed for quick setup and deployment.
 - **Secure**: Keeps sensitive information like API keys out of the client-side code.
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- **Node.js**: Version 14.x or higher.
-- **npm**: Version 6.x or higher.
-- **Stripe Account**: Sign up for a [Stripe account](https://dashboard.stripe.com/register).
-- **Stripe Secret Key**: Available in your [Stripe Dashboard](https://dashboard.stripe.com/apikeys).
-- **Next.js**: Basic understanding of Next.js framework.
 
 ## Getting Started
 
@@ -77,17 +52,6 @@ npm run dev
 Open your browser and navigate to `http://localhost:3011` to view the application.
 
 ## Project Structure
-
-```
-stripe-link-checkout-nextjs/
-├── pages/
-│   ├── api/
-│   │   └── create-checkout-buyonce-session.ts
-│   ├── cancel.tsx
-│   ├── index.tsx
-│   └── success.tsx
-└── .env.local
-```
 
 - **pages/api/create-checkout-buyonce-session.ts**: API route that creates a Stripe Checkout Session.
 - **pages/index.tsx**: Main page with a button to initiate the checkout process.
@@ -179,9 +143,3 @@ const session = await stripe.checkout.sessions.create({
 - **Stripe Documentation**
   - [Stripe Checkout](https://stripe.com/docs/payments/checkout)
   - [Stripe Link](https://stripe.com/payments/link)
-- **Next.js Documentation**
-  - [API Routes](https://nextjs.org/docs/api-routes/introduction)
-  - [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables)
-- **TypeScript**
-  - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-  - [Next.js TypeScript](https://nextjs.org/docs/basic-features/typescript)
