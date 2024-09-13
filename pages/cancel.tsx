@@ -1,7 +1,6 @@
-export default function Cancel() {
-  return (
-    <main>
-      <h1>Cancel</h1>
-    </main>
-  );
-}
+const Cancel: React.FC = () => (
+  <main>
+    <h1>Cancelled</h1>
+  </main>
+)
+export default Cancel
