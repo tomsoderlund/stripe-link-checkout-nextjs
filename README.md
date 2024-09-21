@@ -82,8 +82,7 @@ Open your browser and navigate to `http://localhost:3011` to view the applicatio
 
 ## Subscriptions
 
-- Product catalog: https://dashboard.stripe.com/test/products (testing) or https://dashboard.stripe.com/products (live)
-- Create new product
+- Create new product: https://dashboard.stripe.com/test/products (testing) or https://dashboard.stripe.com/products (live)
 - In the Pricing list, click the “…” button and then “Copy price ID”
 - Add `STRIPE_PRICE_ID` to `.env.local`
 
