@@ -9,8 +9,8 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
       const origin = req.headers.origin ?? 'http://localhost:3110'
 
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ['card', 'link'],
         mode: 'subscription',
+        payment_method_types: ['card', 'link'],
         line_items: [
           {
             price: process.env.STRIPE_PRICE_ID as string,

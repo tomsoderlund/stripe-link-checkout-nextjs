@@ -9,20 +9,20 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
       const origin = req.headers.origin ?? 'http://localhost:3110'
 
       const session = await stripe.checkout.sessions.create({
+        mode: 'payment',
         payment_method_types: ['card', 'link'],
         line_items: [
           {
             price_data: {
-              currency: 'usd',
               product_data: {
                 name: 'Sample Product'
               },
-              unit_amount: 500 // Amount in cents ($5.00)
+              unit_amount: 500, // Amount in cents ($5.00)
+              currency: 'usd'
             },
             quantity: 1
           }
         ],
-        mode: 'payment',
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${origin}/cancel`
       })
