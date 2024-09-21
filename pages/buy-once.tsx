@@ -8,7 +8,7 @@ const BuyOnce: React.FC = () => {
   const handleCheckout = async (): Promise<void> => {
     setLoading(true)
     try {
-      const response = await fetch('/api/create-checkout-buyonce-session', {
+      const response = await fetch('/api/create-purchase', {
         method: 'POST'
       })
       const data = await response.json()

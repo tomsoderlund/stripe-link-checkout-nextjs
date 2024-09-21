@@ -55,7 +55,7 @@ Open your browser and navigate to `http://localhost:3011` to view the applicatio
 
 ## Project Structure
 
-- **pages/api/create-checkout-buyonce-session.ts**: API route that creates a Stripe Checkout Session.
+- **pages/api/create-purchase.ts**: API route that creates a Stripe Checkout Session.
 - **pages/index.tsx**: Main page with a button to initiate the checkout process.
 - **pages/success.tsx**: Success page displayed after a successful payment.
 - **pages/cancel.tsx**: Cancel page displayed if the payment is canceled.
@@ -91,10 +91,10 @@ Open your browser and navigate to `http://localhost:3011` to view the applicatio
 
 ### Modify Product Details
 
-To change the product name or price, edit the `line_items` in `create-checkout-buyonce-session.ts`:
+To change the product name or price, edit the `line_items` in `create-purchase.ts`:
 
 ```typescript
-// pages/api/create-checkout-buyonce-session.ts
+// pages/api/create-purchase.ts
 
 const session = await stripe.checkout.sessions.create({
   // ...
@@ -116,7 +116,7 @@ const session = await stripe.checkout.sessions.create({
 
 ### Update Success and Cancel URLs
 
-If you're deploying to production, update the `success_url` and `cancel_url` in `create-checkout-buyonce-session.ts`:
+If you're deploying to production, update the `success_url` and `cancel_url` in `create-purchase.ts`:
 
 ```typescript
 const YOUR_DOMAIN = 'https://yourdomain.com';

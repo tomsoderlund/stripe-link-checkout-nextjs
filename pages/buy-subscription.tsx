@@ -8,7 +8,7 @@ const BuySubscription: React.FC = () => {
   const handleCheckout = async (): Promise<void> => {
     setLoading(true)
     try {
-      const response = await fetch('/api/create-checkout-subscription-session', {
+      const response = await fetch('/api/create-subscription', {
         method: 'POST'
       })
       const data = await response.json()
